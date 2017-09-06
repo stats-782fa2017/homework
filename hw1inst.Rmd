@@ -21,7 +21,9 @@ where $A_1,\ldots,A_k,B$ are $n\times n$ symmetric matrices. Prove this result u
 
 # Duality.
 
-a. Derive the dual of a general LP (note the solution in the notes):
+## 
+
+Derive the dual of a general LP (note the solution in the notes):
 \[
 \begin{aligned}
 \min_x &\quad c^\top x\\
@@ -30,7 +32,9 @@ a. Derive the dual of a general LP (note the solution in the notes):
 \end{aligned}
 \]
 
-b. Consider the simpler LP
+##
+
+Consider the simpler LP
 \[
 \begin{aligned}
 \min_x &\quad c^\top x\\
@@ -42,14 +46,14 @@ along with the related problem
 \[
 \begin{aligned}
 \min_x &\quad c^\top x-\tau\sum_i \log(x_i)\\
-\mbox{subject to} &\quad Ax=b.
+\mbox{subject to} &\quad Ax=b.\\
 \end{aligned}
 \]
 The second version is sometimes called the log barrier function, and acts as a 'soft' inequality constraint, because it will tend to positive infinity as any of the $x_i$ tend to zero from the right. Throughout, assume that $\{x : x > 0,\ Ax = b\}$ and $\{y : A^\top y > -c\}$ are non-empty. i.e. the primal LP and its dual are both strictly feasible.
 
-    i. Derive the dual and the KKT conditions for the original problem.
-    ii. Derive the dual and the KKT conditions for the log barrier problem.
-    iii. Describe the differences in the two KKT conditions. (Hint: what can you observe about the second set of KKT conditions when $\tau$ is taken to be large?)
+i. Derive the dual and the KKT conditions for the original problem.
+ii. Derive the dual and the KKT conditions for the log barrier problem (note the implicit constraint on $x$ given by the domain of the objective).
+iii. Describe the differences in the two KKT conditions. (Hint: what can you observe about the second set of KKT conditions when $\tau$ is taken to be large?)
     
 
 
