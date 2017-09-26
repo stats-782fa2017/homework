@@ -53,7 +53,7 @@ The second version is sometimes called the log barrier function, and acts as a '
 
 i. Derive the dual and the KKT conditions for the original problem.
 ii. Derive the dual and the KKT conditions for the log barrier problem (note the implicit constraint on $x$ given by the domain of the objective).
-iii. Describe the differences in the two KKT conditions. (Hint: what can you observe about the second set of KKT conditions when $\tau$ is taken to be large?)
+iii. Describe the differences in the two KKT conditions. (Hint: what can you observe about the second set of KKT conditions when $\tau$ is taken to be small?)
     
 
 
