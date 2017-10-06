@@ -24,5 +24,6 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 homework.Rproj
-*sol*
+*2sol*
 .DS_Store
+hw1sol_files
