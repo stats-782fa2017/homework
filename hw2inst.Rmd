@@ -30,7 +30,9 @@ Prove that for any $\epsilon >0$,
 
 # Orthogonal design lasso bits
 
-Let $y_i = x_i^\top \beta^* + \eta_i$ for $i=1,\ldots,n$. Assume that the design matrix $\X = (x_1, \ldots, x_n)^\top$ and that $\X^\top\X=nI_p$. Also assume that $\log\Expect{e^{\lambda\eta_i}} \leq \sigma^2\lambda^2/2$. Suppose that $\beta^*$ is sparse: $\mathcal{S}=\{j : \beta^*_j\neq 0\}$ and that $\beta^*$ is such that $\norm{\beta^*_{S^c}}_1 \leq L\norm{\beta^*_S}$ for some $L$. Let
+Let $y_i = x_i^\top \beta^* + \eta_i$ for $i=1,\ldots,n$. Assume that the design matrix $\X = (x_1, \ldots, x_n)^\top$ is not random.  Also assume that $\log\Expect{e^{\lambda\eta_i}} \leq \sigma^2\lambda^2/2$. 
+<!-- Suppose that $\beta^*$ is sparse: $\mathcal{S}=\{j : \beta^*_j\neq 0\}$ and that $\beta^*$ is such that $\norm{\beta^*_{S^c}}_1 \leq L\norm{\beta^*_S}$ for some $L$. Let -->
+Let
 \[
 \hat\beta = \argmin_\beta \frac{1}{2n} \norm{Y-\X\beta} + \lambda\norm{\beta}_1.
 \]
@@ -39,15 +41,16 @@ Let $y_i = x_i^\top \beta^* + \eta_i$ for $i=1,\ldots,n$. Assume that the design
 
 Derive the so-called "basic inequality":
 \[
-\norm{\X\beta^*-\X\hat\beta} + \lambda\norm{\beta}_1 \leq \frac{1}{n}\eta^\top \X(\beta^*-\hat\beta)+\lambda\norm{\beta_*}_1
+\norm{\X\beta^*-\X\hat\beta} + \lambda\norm{\beta}_1 \leq \frac{1}{n}\eta^\top \X(\hat\beta-\beta^*)+\lambda\norm{\beta^*}_1
 \]
 
 ## 
 
 Let $X_j$ be the $j^{th}$ column of $\X$. Find a constant $M$ such that $\P{\mathcal{G}} \geq 1-2e^{-\delta}$ for 
 \[
-\mathcal{G} = \left\{\max_{j} |\eta^\top X_j| < M\right\}.
+\mathcal{G} = \left\{\max_{j} |\eta^\top X_j|/n < M\right\}.
 \]
+
 
 
 
@@ -55,5 +58,9 @@ Let $X_j$ be the $j^{th}$ column of $\X$. Find a constant $M$ such that $\P{\mat
 
 Prove the following result. Let $H$ be a set of hypotheses bounded by $M>0$ and consider an i.i.d. sample of size $n$. For any $h\in H$, with probability at least $1-\delta$
 \[
-R_n(h) \leq \hat{R}_n(h) + \hat{\mathcal{R}}_n(H) + 3M\sqrt{\frac{2\log(2/\delta)}{2}}.
+R_n(h) \leq \hat{R}_n(h) + \hat{\mathcal{R}}_n(H) + 3M\sqrt{\frac{2\log(2/\delta)}{n}}.
+\]
+You may use the result from class that 
+\[
+R_n(h) \leq \hat{R}_n(h) + \mathcal{R}_n(H) + M\sqrt{\frac{2\log(1/\delta)}{n}}.
 \]
