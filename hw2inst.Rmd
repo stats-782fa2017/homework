@@ -41,7 +41,7 @@ Let
 
 Derive the so-called "basic inequality":
 \[
-\norm{\X\beta^*-\X\hat\beta} + \lambda\norm{\beta}_1 \leq \frac{1}{n}\eta^\top \X(\hat\beta-\beta^*)+\lambda\norm{\beta^*}_1
+\frac{1}{2n}\norm{\X\beta^*-\X\hat\beta} + \lambda\norm{\hat\beta}_1 \leq \frac{1}{n}\eta^\top \X(\hat\beta-\beta^*)+\lambda\norm{\beta^*}_1
 \]
 
 ## 
